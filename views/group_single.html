@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title> ROOMIES_Groups</title>
+        <script src="/static/javascripts/lib/jquery.min.js"></script>
+        <script src="/static/javascripts/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/style2.css"/>
+    </head>
+
+    <body>
+      <div class = "container">
+        <div class = "title"> ROOMIES </div>
+      </div>
+          <div class = "todo-area">
+            <ul id = "todo"> </ul>
+          <br/>
+            <textarea id="todo-text"></textarea>
+            <a class="btn" type="submit" id="addTodo">Add Todo</a>
+          </div>
+
+
+            <div class="main-body">
+                    <div class="left-col">
+                      <a href="#" class="btn" id="new-post">Add new Post + </a>
+                      <div class="modal" style="display:none">
+                      <div class="post-area">
+                        <textarea type="text" id="postTitle">
+                            </textarea>
+                        <textarea type="text" id="postText">
+                        </textarea>
+                        <a class="btn" type="submit" id="submit-post">Submit Post</a>
+                        <a class="btn" id="close">Close</a>
+                      </div>
+                      </div>
+                      
+                    <ul id="post"></ul>
+                    
+                    </div>
+
+                    <div class="right-col">
+                      <div id="show-post" style="display:none">
+                        <div id="post-info">
+                            <div class='title-contain'>
+                            <p id="post-title"></p>
+                           </div>
+                           <div class='text-contain'>
+                            <p id="post-text"></p>
+                            </div>
+                            Author: <p id="author"></p>
+                            <a class="btn1" type="submit" id="deletePost">delete </a>
+                            <a class="btn1" type="submit" id="close_post">close </a>
+                          <br/><br/>
+                          <ul id = "show-comment"> </ul>
+                          <textarea id="comment"></textarea>
+                          <a class="btn" type="submit" id="submitComment">Add Comment</a>
+                          </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+
+                  <div class = "footer">
+                      Group Name : <%= groupName %> <br/>
+                      <%= description %>
+        
+                      <form method="POST" action = '/groups/<%= groupName %>/sendRequests'>
+                        Add roommates to your group 
+                            <div class = "form-group">
+        
+                                User Name: <br/>
+                                <input id ='submit-request' type="text" name="reciever" placeholder="your roommate's username"/> <br/>
+                              </div>
+                                <button class = "btn" type="submit"> Send </button>
+                            </form>
+                    </div>
+    </body>
+</html>

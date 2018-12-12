@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> ROOMIES_Groups</title>
+        <script src="/static/javascripts/lib/jquery.min.js"></script>
+        <script src="/static/javascripts/main2.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/style2.css"/>
+    </head>
+    <body>
+    
+    <div class = "container">
+        <div class = "title">ROOMIES :) </div>
+    </div>
+
+    <div class = "main-body">
+
+        <div class = "left-col">
+            Group List
+            <% if (user) { %>
+            <ul id="groups">
+                <% if (typeof groups == 'object') { %>
+                <% groups.forEach(function(q) { %>
+                <li data-qid=<%=q.id %>><a href = <%= /groups/ + q.groupName%>>  <%=q.groupName%> </a></li>
+                <% })
+            } %>
+            </ul>
+        <% }%>
+
+        </div>
+        <div class = "right-col">
+            <div class = "profile">
+                    <% if (user) { %> 
+                        Hi <%= user %>
+                        <br/> 
+                        <a href = "account/logout" > Log Out </a>
+                    <% } %>
+                    <div id = "joinRequest"> 
+                        <div id = "show-request" action = ""></div>
+                    </div>
+            </div>
+            Looking for new roomates? 
+            <form method = "POST" action = "/groups/findRoommates">
+            <button class = btn type = "submit"> find roommates </button>
+             </form>
+            Can't find your group? Create one!
+            <form method="POST">
+                <div class = "form-group">
+                  Group Name: <br/>
+                  <input type="text" name="groupName" placeholder="Group Name"/> <br/>
+                </div>
+                <div class = "form-group">
+                  Description: <br/>
+                  <input type="text" name="description" placeholder="short description about your group!"/> <br/>
+                </div>
+                  <button class = "btn" type="submit"> Submit </button>
+                </form>
+        </div>
+    </div>
+    </body>
+</html>
