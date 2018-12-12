@@ -1,0 +1,171 @@
+body {
+  position: absolute;
+  margin: 50px; 
+  color: rgb(25, 25, 37);
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.nav {
+  width: 100%;
+  height: 70px;
+  margin: 0px;
+}
+
+.nav > p {
+  float: right;
+  padding-right: 20px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.add {
+  float: right;
+  padding-right: 20px; 
+}
+
+.nav > h2 {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #FFF;
+  background-color: #F79E21;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+
+.left-col {
+  width: 60%;
+  height: 90%;
+  overflow-y:  scroll;
+  float: left;
+  display: inline-block;
+}
+
+.right-col {
+  width: 30%;
+  float: right; 
+  margin-left: 5%;
+  display: inline-block;
+}
+.mainTitle {
+  text-align: center;
+}
+
+.form-group {
+  padding: 2px; 
+}
+
+input[type=text], input[type=password] {
+  width: 100px;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn1 {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding: 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+}
+
+.upperRight {
+  position: relative;
+   top: 0px;
+   right: 0px;
+}
+
+li {
+  list-style: none;
+  padding: 20px;
+  margin: 5px;
+  border: 1px solid #000;
+  transition: all 0.5s
+}
+
+li:hover {
+  background-color: #F79E21;
+  color: #FFF;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0px;
+}
+
+#groups {
+  background-color: #FFF;
+  width: 50%;
+  height: 30%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#post-info {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5%;
+  border: 1px solid #000;
+}
+
+#post {
+  font-size: 2.5em;
+}
+
+#comment {
+  padding-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  background-color: rgba(0,0,0,.5);
+}
+
+.modal > .post-area {
+  background-color: #FFF;
+  width: 50%;
+  height: 30%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.post-area > textarea {
+  width: 80%;
+  margin: 10%;
+}
